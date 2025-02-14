@@ -33,9 +33,62 @@
             list-style: none;
             margin: 0 23px;
         }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        nav ul li a:hover{
+            /* text-decoration: none; */
+            color:rgb(118, 118, 241);
+            font-size: 1.01rem;
+        }
         .left{
             font-size: 1.5rem;
         }
+        .firstSection{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 82px 0;
+            /* margin: 50px 0; */
+        }
+        .firstSection >div{
+            width: 30%;
+        }
+        .leftSection{
+            /* background-color: red; */
+            font-size: 2.6rem;
+            /* margin: 70px 0; */
+        }
+        .rightSection img{
+            /* background-color: red; */
+            width: 85%;
+          
+        }
+        .purple{
+            color: rgb(184, 140, 225);
+        }
+        #element{
+            color: rgb(174, 134, 211);
+        }
+        main hr{
+            border: 0;
+            background-color: rgb(167, 167, 243);
+            height: 1px;
+            margin: 28px 80px;
+        }
+        .secondSection{
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+        .secondSection h1{
+            font-size: 1.8rem;
+        }
+        .text-gray{
+            color: gray;
+        }
+
     </style>
 </head>
 <body>
@@ -44,20 +97,47 @@
             <div class="left">Shalini's Portfolio</div>
             <div class="right"></div>
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Services</li>
-                <li>Projects</li>
-                <li>Contact me</li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Services</a></li>
+                <li><a href="/">Contact me</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="first">
-            <div class="leftSection"></div>
-            <div class="rightSection"></div>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="purple">
+                Shalini
+                </span>
+                <div>
+                    and I am a passionate
+                </div>
+                <!-- <div> Web Developer</div> -->
+                <span id="element"></span>
+            </div>
+            <div class="rightSection">
+                <img src="Bg.png" alt="bg image">
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <span class="text-gray">What I have done so far</span>
+            <h1>
+                Work Experience
+            </h1>
+            <div class="box"></div>
         </section>
     </main>
+    
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Web Developer', 'Data Analytic','Video Editor'],
+      typeSpeed: 50,
+    });
+  </script>
 </body>
 </html>
