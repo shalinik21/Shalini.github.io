@@ -157,70 +157,46 @@
             text-decoration: none;
             color: white;
         }
-        /* Ensuring responsiveness for all screen sizes */
-* {
-    box-sizing: border-box;
-}
-
-/* Make images responsive */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Responsive navigation */
+        /* Optimize second section for mobile */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        height: auto;
-        padding: 10px 0;
+    .secondSection {
+        max-width: 95vw;
+        height: auto; /* Remove fixed height */
+        padding: 20px 0; /* Reduce padding */
     }
-    nav ul {
-        flex-direction: column;
-        padding: 10px 0;
-    }
-    nav ul li {
-        margin: 10px 0;
-    }
-}
-
-/* Adjust first section layout */
-@media (max-width: 768px) {
-    .firstSection {
-        flex-direction: column;
-        text-align: center;
-    }
-    .firstSection > div {
-        width: 90%;
-    }
-}
-
-/* Make college experience section responsive */
-@media (max-width: 768px) {
+    
     .secondSection .box {
         flex-direction: column;
         align-items: center;
         width: 90%;
+        margin: 20px auto; /* Reduce margin */
     }
-    .secondSection .vertical {
-        margin: 20px 0;
-    }
-    .vertical-title, .vertical-desc {
-        text-align: center;
-        width: 100%;
-    }
-}
 
-/* Responsive footer */
-@media (max-width: 768px) {
-    .footer {
+    .secondSection .vertical {
+        margin: 15px 0;
+        height: auto; /* Remove fixed height */
+        display: flex;
         flex-direction: column;
+        align-items: center;
         text-align: center;
-        padding: 20px;
+        padding-bottom: 20px;
     }
-    .footer > div {
+
+    .image-top {
+        width: 40px; /* Resize icons */
+        top: 0;
+        left: 0;
+    }
+
+    .vertical-title {
+        font-size: 1rem; /* Adjust title size */
         width: 100%;
-        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+
+    .vertical-desc {
+        font-size: 0.9rem; /* Make description smaller */
+        width: 85%;
     }
 }
 
